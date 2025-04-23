@@ -1,0 +1,57 @@
+name: Build and Deploy Website
+description: Build a static website using Frozen-Flask and deploy to a branch
+on:
+  push:
+    branches:
+      - main  # トリガーとなるブランチを指定
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # リポジトリをチェックアウト
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Pythonの環境をセットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"  # Pythonのバージョンを指定
+
+      # pipをアップグレード
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      # Poetryをインストール
+      - name: Install Poetry
+        run: pip install poetry
+
+      # PoetryでPython依存関係をインストール
+      - name: Install Python Dependencies
+        run: poetry install --no-root
+
+      # Node.jsの環境をセットアップ
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"  # Node.jsのバージョンを指定
+          cache: "yarn"
+
+      # YarnでNode.js依存関係をインストール
+      - name: Install Node.js Dependencies
+        run: yarn install
+
+      # Frozen-Flaskを使用して静的サイトをビルド
+      - name: Build Static Website
+        run: poetry run python freeze.py
+
+      # ビルド結果を任意のブランチにデプロイ
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs  # Frozen-Flaskで生成された静的ファイルのディレクトリ
+          destination_branch: gh-pages  # デプロイ先のブランチ
+          force_orphan: true  # キャッシュをクリアして新しいブランチを作成
