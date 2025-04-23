@@ -1,0 +1,59 @@
+// 変数定義
+
+// Colors
+$color-brack: #333;
+$color-white: #f1f1f1;
+
+// viewport
+$sizeSmartphone: 430px;
+$sizeTablet: 820px;
+@custom-media --smartphone-viewport (max-width: $sizeSmartphone);
+@custom-media --tablet-viewport (max-width: $sizeTablet);
+
+// SectionHeader
+$pc-font-size: 2rem;
+$tablet-font-size: 1.5rem;
+$smartPhone-font-size: 1.2rem;
+@define-mixin decorative-header {
+  display: flex;
+  align-items: center;
+  padding: 8vw 0;
+  font-size: $pc-font-size;
+  @media (--tablet-viewport) {
+    font-size: $tablet-font-size;
+  }
+  @media (--smartphone-viewport) {
+    font-size: $smartPhone-font-size;
+  }
+
+  &::before, &::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+  }
+  &::before {
+    margin-right: $pc-font-size;
+    @media (--tablet-viewport) {
+      margin-right: $tablet-font-size;
+    }
+    @media (--smartphone-viewport) {
+      margin-right: $smartPhone-font-size;
+    }
+    background: linear-gradient(to left, #090979, #9EE4FF 75%, transparent);
+  }
+  &::after{
+    margin-left: $pc-font-size;
+    @media (--tablet-viewport) {
+      margin-left: $tablet-font-size;
+    }
+    @media (--smartphone-viewport) {
+      margin-left: $smartPhone-font-size;
+    }
+    background: linear-gradient(to right, #090979, #9EE4FF 75%, transparent);
+  }
+}
+
+// fontawesome
+.fa-brands {
+  color: gray;
+}

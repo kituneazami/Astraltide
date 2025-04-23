@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lnag="ja">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="{{ 'img/favicon.ico'|url }}" id="favicon">
+  <title>Astraltide</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Astraltide Website">
+  <meta name="keywords" content="Astraltide, TsukumoShiro, Website">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="google" content="notranslate">
+  <meta name="author" content="TsukumoShiro">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {# include "_ogp.html" #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ 'css/style.css'|url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <h1>Astraltide</h1>
+  </header>
+  <main>
+  {% block container %}{% endblock %}
+  </main>
+  <footer>
+     <p>&copy; 2025 ASTRALTIDE.</p>
+
+    <!-- <ul class="sns-btn">
+      <li><a href="#" target="_blank"><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+    </ul> -->
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="{{ 'js/bundle.js'|url }}"></script>
+  {% block after_script %}
+  {% endblock %}
+</body>
+</html>

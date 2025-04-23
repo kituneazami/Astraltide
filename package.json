@@ -1,0 +1,34 @@
+{
+  "name": "astraltide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "run-s clean build:css build:js",
+    "build:js": "webpack",
+    "build:css": "postcss assets/css/style.css -d static/css",
+    "clean": "rm -f static/css/*.css static/js/*.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:js": "webpack --progress --colors --watch --debug --mode development",
+    "watch:css": "postcss assets/css/style.css -d static/css -w",
+    "freeze": "python freeze.py"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^10.0.0",
+    "cssnano": "^7.0.6",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-comment": "^2.0.0",
+    "postcss-custom-media": "^11.0.5",
+    "postcss-import": "^16.1.0",
+    "postcss-mixins": "^11.0.3",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.1.5",
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {}
+}
