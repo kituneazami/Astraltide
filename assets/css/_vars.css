@@ -17,12 +17,14 @@ $smartPhone-font-size: 1.2rem;
 @define-mixin decorative-header {
   display: flex;
   align-items: center;
-  padding: 8vw 0;
+  padding: 10vh 0;
   font-size: $pc-font-size;
   @media (--tablet-viewport) {
+    padding: 8vh 0;
     font-size: $tablet-font-size;
   }
   @media (--smartphone-viewport) {
+    padding: 6vh 0;
     font-size: $smartPhone-font-size;
   }
 
