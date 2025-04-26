@@ -11,7 +11,7 @@ env.bak/
 venv.bak/
 *.egg-info/
 dist/
-build/
+# build/
 *.log
 db.sqlite3
 
@@ -55,7 +55,9 @@ instance/
 # Windows
 Thumbs.db
 
-# build
-build/
+# Local
+static/css
+static/js
 
+# other
 memo.md
