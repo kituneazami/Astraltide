@@ -3,7 +3,7 @@ description: Build a static website using Frozen-Flask and deploy to a branch
 on:
   push:
     branches:
-      - main  # トリガーとなるブランチを指定
+      - master  # トリガーとなるブランチを指定
 
 jobs:
   build-and-deploy:
