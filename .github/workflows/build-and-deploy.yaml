@@ -47,6 +47,14 @@ jobs:
       - name: Build Static Website
         run: poetry run python freeze.py
 
+      # Prettierをインストール
+      - name: Install Prettier
+        run: npm install -g prettier
+
+      # index.htmlを整形
+      - name: Format index.html
+        run: prettier --write ./docs/index.html
+
       # ビルド結果を任意のブランチにデプロイ
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
