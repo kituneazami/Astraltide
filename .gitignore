@@ -58,6 +58,7 @@ Thumbs.db
 # Local
 static/css
 static/js
+docs/
 
 # other
 memo.md
