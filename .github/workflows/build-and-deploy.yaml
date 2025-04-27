@@ -3,7 +3,7 @@ description: Build a static website using Frozen-Flask and deploy to a branch
 on:
   push:
     branches:
-      - main  # トリガーとなるブランチを指定
+      - main
 
 jobs:
   build-and-deploy:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.13"  # Pythonのバージョンを指定
+          python-version: '3.13'
 
       # pipをアップグレード
       - name: Upgrade pip
@@ -36,8 +36,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.x"  # Node.jsのバージョンを指定
-          cache: "yarn"
+          node-version: '22.x'
+          cache: 'yarn'
 
       # YarnでNode.js依存関係をインストール
       - name: Install Node.js Dependencies
@@ -49,7 +49,7 @@ jobs:
 
       # Prettierをインストール
       - name: Install Prettier
-        run: npm install -g prettier
+        run: yarn global add prettier
 
       # index.htmlを整形
       - name: Format index.html
@@ -60,6 +60,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs  # Frozen-Flaskで生成された静的ファイルのディレクトリ
-          destination_branch: gh-pages  # デプロイ先のブランチ
-          force_orphan: true  # キャッシュをクリアして新しいブランチを作成
+          publish_dir: ./docs # Frozen-Flaskで生成された静的ファイルのディレクトリ
+          destination_branch: gh-pages # デプロイ先のブランチ
+          force_orphan: true # キャッシュをクリアして新しいブランチを作成
