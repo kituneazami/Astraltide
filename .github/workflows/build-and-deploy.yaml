@@ -44,6 +44,10 @@ jobs:
       - name: Install Node.js Dependencies
         run: yarn install
 
+      # Yarn build
+      - name: Build with Yarn
+        run: yarn build
+
       # Frozen-Flaskを使用して静的サイトをビルド
       - name: Build Static Website
         run: poetry run python freeze.py
