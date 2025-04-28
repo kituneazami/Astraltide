@@ -56,8 +56,8 @@ instance/
 Thumbs.db
 
 # Local
-static/css
-static/js
+static/css/*.css
+static/js/*.js
 docs/
 
 # other
