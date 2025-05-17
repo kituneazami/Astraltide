@@ -69,6 +69,15 @@
         color: #333;
         padding: .5rem 1rem 1.5rem;
 
+        > i {
+          &::before, &::after{
+            content: " - ";
+          }
+          margin-left: .5rem;
+          font-size: .8rem;
+          vertical-align: .1rem;
+        }
+
         &:nth-child(8) {
           min-height: 3rem;
         }
@@ -85,7 +94,8 @@
   }
   .background {
     padding-bottom: 1rem;
-    text-indent: 1.2rem;
+    font-size: 1rem;
+    text-indent: 1rem;
     line-height: 1.5rem;
   }
   h3 {
@@ -123,14 +133,12 @@
         font-size: 1.4rem;
       }
       dd {
+        width: calc(100% + 5vw); // fixme
         font-size: 1.2rem;
         padding: .5rem 0;
       }
     }
     .designer {
-      font-size: 1.2rem;
-    }
-    .background{
       font-size: 1.2rem;
     }
     h3 {
@@ -154,13 +162,18 @@
           }
       }
     }
-    .profile{
+    .profile {
       dt {
         font-size: 1.2rem;
       }
       dd {
+        width: calc(100% - 10vw); // fixme
         font-size: 1rem;
         padding: .5rem 0;
+
+        > i {
+          font-size: .5rem;
+        }
       }
     }
     .designer {
@@ -169,8 +182,8 @@
         margin: 0 2px;
       }
     }
-    .background{
-      font-size: 1rem;
+    .background {
+      font-size: .8rem;
     }
     h3 {
       font-size: 1.2rem;

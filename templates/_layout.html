@@ -8,7 +8,7 @@
   <meta name="description" content="Astraltide Website" />
   <meta name="google" content="notranslate" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {# include "_ogp.html" #}
+  {%- include "_ogp.html" %}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet" />
@@ -30,6 +30,6 @@
   </footer>
   <!-- SCRIPTS -->
   <script src="{{ 'js/bundle.js'|url }}"></script>
-    {% block after_script %}{% endblock %}
+  {% block after_script %}{% endblock %}
 </body>
 </html>
