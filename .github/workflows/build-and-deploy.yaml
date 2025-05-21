@@ -58,7 +58,11 @@ jobs:
 
       # index.htmlを整形
       - name: Format index.html
-        run: prettier --write ./docs/index.html
+        run: prettier --write --tab-width 2 --use-tabs false ./docs/index.html
+
+      # Create CNAME file
+      - name: Create CNAME file
+        run: echo "astraltide.net" > ./docs/CNAME
 
       # ビルド結果を任意のブランチにデプロイ
       - name: Deploy to gh-pages
