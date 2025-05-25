@@ -1,7 +1,7 @@
 // 変数定義
 
-// Colors
-$color-brack: #333;
+// Default Colors
+$color-black: #333;
 $color-white: #f1f1f1;
 
 // viewport
@@ -57,5 +57,9 @@ $smartPhone-font-size: 1.2rem;
 
 // fontawesome
 .fa-brands {
-  color: gray;
+  color: darkgray;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $color-black;
+  }
 }
