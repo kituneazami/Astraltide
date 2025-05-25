@@ -9,7 +9,7 @@
     "build:css": "postcss assets/css/style.css -d static/css",
     "clean": "rm -f static/css/*.css static/js/*.js",
     "watch": "npm-run-all -p watch:*",
-    "watch:js": "webpack --progress --colors --watch --debug --mode development",
+    "watch:js": "webpack --progress --watch --mode development",
     "watch:css": "postcss assets/css/style.css -d static/css -w",
     "freeze": "python freeze.py"
   },
