@@ -1,6 +1,6 @@
 .top {
   position: relative;
-  height: 100svh;
+  height: calc(100vh + 80px);
   max-width: 100vw;
   background-image: linear-gradient(0deg, #57C3C6, #115d89 25%, #080f1c);
   display: flex;
@@ -54,7 +54,7 @@
     animation: scrollDown 1.5s ease infinite;
     border-radius: 100%;
     margin: 0 auto;
-    bottom: 0;
+    bottom: 80px; //section分の上に
     content-visibility: hidden; // Safariでの表示は汲み取らない
     animation-delay: 5s;
 
@@ -67,6 +67,24 @@
         height: 100%;
         background: linear-gradient(transparent, #f1f1f1, transparent);
     }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    pointer-events: none;
+    background:
+      url('data:image/svg+xml;utf8,<svg width="100%" height="80" viewBox="0 0 1920 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 Q480,80 960,40 T1920,40 V80 H0 Z" fill="rgba(241,241,241,0.5)"/></svg>') no-repeat top 0% left 50%,
+      url('data:image/svg+xml;utf8,<svg width="100%" height="80" viewBox="0 0 1920 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q480,90 960,50 T1920,50 V80 H0 Z" fill="rgba(241,241,241,0.7)"/></svg>') no-repeat top 0% left 30%,
+      url('data:image/svg+xml;utf8,<svg width="100%" height="80" viewBox="0 0 1920 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 Q480,100 960,60 T1920,60 V80 H0 Z" fill="rgba(241,241,241,1)"/></svg>') no-repeat top 0% left 0%;
+    background-size: cover, cover, cover;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
   }
 }
 
