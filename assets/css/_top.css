@@ -1,6 +1,6 @@
 .top {
   position: relative;
-  height: calc(100vh + 80px);
+  height: calc(100svh + 80px);
   max-width: 100vw;
   background-image: linear-gradient(0deg, #57C3C6, #115d89 25%, #080f1c);
   display: flex;
