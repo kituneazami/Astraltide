@@ -4,7 +4,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', YuGothic,
     'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, Arial, 'メイリオ', Meiryo,
     sans-serif;
-  color: $color-brack;
+  color: $color-black;
   background-color: $color-white;
   font-size: 1.2em;
 
@@ -29,7 +29,7 @@ footer {
   width: 100vw;
   line-height: 60px;
   color: $color-white;
-  background-color: $color-brack;
+  background-color: $color-black;
   text-align: center;
   font-size: 0.8rem;
   position: relative;
