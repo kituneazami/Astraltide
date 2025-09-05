@@ -5,6 +5,7 @@
   h1 {
     @mixin decorative-header;
   }
+
   p {
     font-size: 1rem;
     line-height: 1.8rem;
@@ -15,6 +16,7 @@
       line-height: 1.5rem;
     }
   }
+
   img {
     width: 50vw;
     &:nth-child(even) {
