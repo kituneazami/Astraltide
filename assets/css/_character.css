@@ -6,6 +6,15 @@
     @mixin decorative-header;
   }
 
+  .Finoa {
+    @mixin character-box #60efff, #0061ff;
+    margin-bottom: 10vh;
+  }
+  .Noctia {
+    @mixin character-box #60efff, #00ff87;
+    margin-bottom: 10vh;
+  }
+
   article {
     display: grid;
     grid-template-columns: 1fr 2fr;

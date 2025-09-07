@@ -56,6 +56,43 @@ $smartPhone-font-size: 1.2rem;
   }
 }
 
+// CharacterBox
+@define-mixin character-box $color-first, $color-second {
+  position: relative;
+  z-index: 0;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, $color-first 0%, $color-second 100% );
+    transform: translate3d(0px, 15px, 0) scale(0.97);
+    filter: blur(20px);
+    opacity: var(0.7);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+  }
+  &::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+  }
+}
+
 // fontawesome
 .fa-brands {
   color: darkgray;
