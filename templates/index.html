@@ -2,8 +2,10 @@
 
 
 {%- block container %}
+{%- filter indent %}
 {% include "_top.html" %}
 {% include "_about.html" %}
 {% include "_character.html" %}
 {# include "_test.html" #}
+{%- endfilter %}
 {%- endblock %}
