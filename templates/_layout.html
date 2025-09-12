@@ -8,7 +8,9 @@
   <meta name="description" content="Astraltide Website" />
   <meta name="google" content="notranslate" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {%- include "_ogp.html" %}
+  {%- filter indent(2) %}
+    {%- include "_ogp.html" %}
+  {%- endfilter %}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet" />
@@ -20,7 +22,7 @@
     <h1>Astraltide</h1>
   </header>
   <main>
-    {% block container %}{% endblock %}
+{%- block container %}{%- endblock %}
   </main>
   <footer>
      <p>&copy; 2025 ASTRALTIDE.</p>
@@ -30,6 +32,6 @@
   </footer>
   <!-- SCRIPTS -->
   <script src="{{ 'js/bundle.js'|url }}"></script>
-  {% block after_script %}{% endblock %}
+  {%- block after_script %}{%- endblock %}
 </body>
 </html>
