@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "run-s clean build:css build:js",
-    "build:js": "webpack",
+    "build:js": "webpack --mode production",
     "build:css": "postcss assets/css/style.css -d static/css",
     "clean": "rm -f static/css/*.css static/js/*.js",
     "watch": "npm-run-all -p watch:*",
