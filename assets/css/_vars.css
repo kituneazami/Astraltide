@@ -75,10 +75,13 @@ $smartPhone-font-size: 1.2rem;
     z-index: -1;
     background: linear-gradient(-45deg, $color-first 0%, $color-second 100% );
     transform: translate3d(0px, 15px, 0) scale(0.97);
+    transition: transform 0.3s;
     filter: blur(20px);
     opacity: var(0.7);
-    transition: opacity 0.3s;
     border-radius: inherit;
+  }
+  &:hover::before {
+    transform: translate3d(0px, 15px, 0) scale(1);
   }
   &::after{
     content: "";

@@ -147,6 +147,13 @@
       h2 {
         font-size: 1.4rem;
       }
+      figure > img {
+        width: 100%;
+        position: relative;
+        &:nth-child(2) {
+          display: none;
+        }
+      }
     }
     .profile{
       dt {
@@ -174,13 +181,6 @@
       }
       display: flex;
       flex-direction: column;
-      figure > img {
-          width: 100%;
-          position: relative;
-          &:nth-child(2) {
-            display: none;
-          }
-      }
     }
     .profile {
       dt {
