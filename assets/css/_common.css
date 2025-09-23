@@ -8,6 +8,7 @@ body {
   background-color: $color-white;
   font-size: 1.2em;
   overflow-x: hidden;
+  cursor: default;
 }
 
 header {
