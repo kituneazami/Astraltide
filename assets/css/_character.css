@@ -133,6 +133,7 @@
   h3 {
     position: relative;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 1.4rem;
     padding: 1rem 0;
     margin-bottom: 1.4rem;
