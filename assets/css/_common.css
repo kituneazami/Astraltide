@@ -9,6 +9,13 @@ body {
   font-size: 1.2em;
   overflow-x: hidden;
   cursor: default;
+  user-select: none;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 header {
