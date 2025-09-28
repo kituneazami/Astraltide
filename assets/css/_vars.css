@@ -2,7 +2,9 @@
 
 // Default Colors
 $color-black: #333;
-$color-white: #f7f6f5;
+$color-text-black: #4d5156; // Davy's Grey
+$color-text-alt: #51656f; // Dark grayish cerulean
+$color-bg-white: #f7f6f5;
 
 
 // viewport
@@ -18,6 +20,7 @@ $smartPhone-font-size: 1.2rem;
 @define-mixin decorative-header {
   display: flex;
   align-items: center;
+  color: $color-text-alt;
   padding: 10vh 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-size: $pc-font-size;
@@ -63,7 +66,7 @@ $smartPhone-font-size: 1.2rem;
   z-index: 0;
   padding: 1.5rem;
   border-radius: 15px;
-  background-color: $color-white;
+  background-color: $color-bg-white;
 
   &::before {
     content: "";
