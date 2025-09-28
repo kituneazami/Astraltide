@@ -22,6 +22,10 @@
 
     h2 {
       grid-area: 1/1/2/4;
+      color: $color-text-alt;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 0px $color-bg-white,
+                   2px 2px 0px rgba(0, 0, 0, 0.3);
       font-size: 1.6rem;
       padding-bottom: 1rem;
     }
@@ -60,7 +64,6 @@
         margin-bottom: .5rem;
         width: 100%;
         display: flex;
-        color: #333;
         &::after {
           content: "";
           position: absolute;
@@ -71,7 +74,6 @@
         }
       }
       dd {
-        color: #333;
         padding: .5rem 1rem 1.5rem;
         > i {
           margin-left: .5rem;
@@ -113,7 +115,7 @@
 
     // 罫線(点線)
     background-image:
-      linear-gradient(90deg, transparent 0%, transparent 50%, $color-white 50%, $color-white 100%),
+      linear-gradient(90deg, transparent 0%, transparent 50%, $color-bg-white 50%, $color-bg-white 100%),
       linear-gradient(180deg, #ccc 1px, transparent 1px);
     background-size: 8px 100%, 100% 1.5rem;
     padding-bottom: 1px;
@@ -132,6 +134,7 @@
 
   h3 {
     position: relative;
+    color: $color-text-alt;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 1.4rem;
