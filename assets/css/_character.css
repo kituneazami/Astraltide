@@ -109,49 +109,50 @@
     }
   }
 
-  .background {
+  .backbone {
     width: 95%;
     margin: 0 auto;
 
-    // 罫線(点線)
-    background-image:
-      linear-gradient(90deg, transparent 0%, transparent 50%, $color-bg-white 50%, $color-bg-white 100%),
-      linear-gradient(180deg, #ccc 1px, transparent 1px);
-    background-size: 8px 100%, 100% 1.5rem;
-    padding-bottom: 1px;
-
-    > p {
-      padding: 0 .5rem;
-      font-size: 1rem;
-      text-shadow: #d5e8ff 1px 1px 2px;
-      text-indent: 1rem;
-      line-height: 1.5rem;
-      &:not(:last-child) {
-        padding-bottom: 1.5rem;
+    h3 {
+      position: relative;
+      color: $color-text-alt;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      font-size: 1.4rem;
+      padding: 1rem 0;
+      margin-bottom: 1.4rem;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        margin: 0 auto;
+        background-image: linear-gradient(to right, transparent, #9EE4FF 10%, #090979 50%,#9EE4FF 90%, transparent);
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
-  }
+    .backbone-text {
+      // 罫線(点線)
+      background-image:
+        linear-gradient(90deg, transparent 0%, transparent 50%, $color-bg-white 50%, $color-bg-white 100%),
+        linear-gradient(180deg, #ccc 1px, transparent 1px);
+      background-size: 8px 100%, 100% 1.5rem;
+      padding-bottom: 1px;
 
-  h3 {
-    position: relative;
-    color: $color-text-alt;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 1.4rem;
-    padding: 1rem 0;
-    margin-bottom: 1.4rem;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 1px;
-      margin: 0 auto;
-      background-image: linear-gradient(to right, transparent, #9EE4FF 10%, #090979 50%,#9EE4FF 90%, transparent);
-      background-position: center;
-      background-repeat: no-repeat;
+      > p {
+        padding: 0 .5rem;
+        font-size: 1rem;
+        text-shadow: #d5e8ff 1px 1px 2px;
+        text-indent: 1rem;
+        line-height: 1.5rem;
+        &:not(:last-child) {
+          padding-bottom: 1.5rem;
+        }
+      }
     }
   }
 }
@@ -183,7 +184,7 @@
     .designer {
       font-size: 1.2rem;
     }
-    h3 {
+    .backbone > h3 {
       font-size: 1.4rem;
     }
   }
@@ -194,6 +195,7 @@
     article {
       h2 {
         font-size: 1.2rem;
+        letter-spacing: normal;
       }
       display: flex;
       flex-direction: column;
@@ -221,11 +223,11 @@
         margin: 0 2px;
       }
     }
-    .background {
+    .backbone {
       font-size: .8rem;
-    }
-    h3 {
-      font-size: 1.2rem;
+      h3 {
+        font-size: 1.2rem;
+      }
     }
   }
 }
