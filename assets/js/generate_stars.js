@@ -1,6 +1,11 @@
 export default function generateStars() {
   /**
-   * 背景に星を表示する
+   * 背景に星を生成して表示する関数。
+   * ページのDOMが完全に読み込まれた後、.top クラスを持つ要素内に
+   * ランダムな位置・サイズ・アニメーション遅延を持つ星（span要素）を指定数生成して追加します。
+   *
+   * @function
+   * @returns {void} 何も返しません
    */
   document.addEventListener('DOMContentLoaded', () => {
     const starsContainer = document.querySelector('.top');
@@ -19,7 +24,7 @@ export default function generateStars() {
         height: `${size}px`,
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 100}%`,
-        animationDelay: `${Math.random() * 10}s`
+        animationDelay: `${Math.random() * 10}s`,
       });
       starsContainer.appendChild(star);
     }

@@ -109,7 +109,7 @@
     }
   }
 
-  .background {
+  .backbone {
     width: 95%;
     margin: 0 auto;
 
@@ -135,7 +135,7 @@
         background-repeat: no-repeat;
       }
     }
-    .background-text {
+    .backbone-text {
       // 罫線(点線)
       background-image:
         linear-gradient(90deg, transparent 0%, transparent 50%, $color-bg-white 50%, $color-bg-white 100%),
@@ -184,7 +184,7 @@
     .designer {
       font-size: 1.2rem;
     }
-    h3 {
+    .backbone > h3 {
       font-size: 1.4rem;
     }
   }
@@ -223,11 +223,11 @@
         margin: 0 2px;
       }
     }
-    .background {
+    .backbone {
       font-size: .8rem;
-    }
-    h3 {
-      font-size: 1.2rem;
+      h3 {
+        font-size: 1.2rem;
+      }
     }
   }
 }
