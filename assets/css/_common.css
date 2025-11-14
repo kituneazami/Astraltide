@@ -24,6 +24,19 @@ header {
   left: 1rem;
   z-index: 99;
   opacity: 0;
+
+  .site-logo{
+    a {
+      display: block;
+    }
+    img {
+      height: 40px;
+      @media (--smartphone-viewport) {
+        height: 30px;
+      }
+      filter: invert(70%);
+    }
+  }
 }
 
 section {

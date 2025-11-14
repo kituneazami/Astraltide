@@ -19,7 +19,11 @@
 </head>
 <body>
   <header>
-    <h1>Astraltide</h1>
+    <h1 class="site-logo">
+      <a href="{{ url_for('index') }}">
+        <img loading="lazy" src="{{ 'img/Astraltide_Logo_white.svg'|url }}" alt="Astraltide">
+      </a>
+    </h1>
   </header>
   <main>
 {%- block container %}{%- endblock %}
